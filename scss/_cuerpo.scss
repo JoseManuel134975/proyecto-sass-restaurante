@@ -24,6 +24,51 @@ body{
     &-banner{
         text-align: center;
         @include centering(50%);
-        
+    }
+}
+
+.about-us{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    margin: 100px 0;
+
+    &-left{
+        width: 40%;
+
+        img{
+            width: 100%;
+            opacity: 0.7;
+        }
+    }
+
+    &-right{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 100px;
+
+        .stars{
+            margin: 30px 0;
+
+            .star{
+                font-size: 15px;
+                color: $color-primary;
+                margin-left: 10px;
+            }
+        }
+
+        .description{
+            font-family: $font-josefinSans;
+            font-size: 20px;
+            font-style: italic;
+            color: $color-secondary;
+            text-align: justify;
+            
+            &::first-letter{
+                padding-left: 50px;
+            }
+        }
     }
 }

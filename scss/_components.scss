@@ -1,4 +1,33 @@
-.logo{
+.hamburger-menu {
+    width: 40px;
+    height: 40px;
+    /* background-color: red;
+     */
+    position: fixed;
+    top: 10%;
+    right: 5%;
+    z-index: 10;
+
+    .menu {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: transform 0.5s;
+
+        &-line {
+            width: 100%;
+            height: 4px;
+            background-color: $color-primary;
+            transform-origin: right;
+            transition: all 0.5s 0.5s;
+        }
+    }
+}
+
+.logo {
     font-size: 70px;
     color: $color-primary;
     width: 110px;
@@ -7,25 +36,24 @@
     border-radius: 50%;
     @include flexLayout;
     text-decoration: none;
-    margin-right: 20px;
 }
 
-.main-name{
+.main-name {
     font-family: $font-nunito;
     font-size: 50px;
     color: $color-secondary;
     @include textStyles;
 }
 
-.sub-name{
+.sub-name {
     font-family: $font-josefinSans;
-    font-size: 10px;
+    font-size: 18px;
     color: $color-secondary;
     text-align: center;
-    @include textStyles;
+    @include textStyles
 }
 
-.main-heading{
+.main-heading {
     font-family: $font-dancingScript;
     font-size: 100px;
     font-weight: 300;
@@ -33,15 +61,15 @@
     margin-bottom: 40px;
 }
 
-.sub-heading{
+.sub-heading {
     font-family: $font-josefinSans;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 300;
     color: $color-secondary;
     margin-bottom: 80px;
 }
 
-.main-btn{
+.main-btn {
     width: 170px;
     height: 50px;
     font-family: $font-josefinSans;
@@ -54,19 +82,19 @@
     cursor: pointer;
     transition: all 0.5s;
 
-    &:hover{
+    &:hover {
         background-color: $color-primary;
         color: $color-dark;
     }
 }
 
-.card{
-    width: 33.33%;
+.card {
+    width: 33.333%;
     height: 30vw;
     position: relative;
     overflow: hidden;
 
-    &-overlay{
+    &-overlay {
         position: absolute;
         top: 0;
         left: -100%;
@@ -77,22 +105,22 @@
         z-index: 10;
         @include flexLayout;
         flex-direction: column;
-        transition: left 0.7s;
+        transition: all 0.7s;
 
-        &-heading{
+        &-heading {
             font-family: $font-nunito;
             font-size: 50px;
             @include textStyles(capitalize);
         }
 
-        &-paragraph{
+        &-paragraph {
             font-family: $font-josefinSans;
             font-size: 30px;
             margin-bottom: 30px;
             @include textStyles(capitalize);
         }
 
-        &-btn{
+        &-btn {
             width: 180px;
             height: 40px;
             color: $color-primary;
@@ -110,14 +138,14 @@
         }
     }
 
-    &-img{
+    &-img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: cover; // se adapta al contenedor
         opacity: 0.5;
     }
 
-    &:hover &-overlay{
+    &:hover &-overlay {
         left: 0;
     }
 }
